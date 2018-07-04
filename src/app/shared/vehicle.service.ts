@@ -7,7 +7,6 @@ export class VehicleService {
   vehicleList: AngularFireList<any>;
   selectedVehicle: Vehicle = new Vehicle();
   constructor(private firebase: AngularFireDatabase) { }
-
 getData() {
   this.vehicleList = this.firebase.list('Vehicles');
   return this.vehicleList;

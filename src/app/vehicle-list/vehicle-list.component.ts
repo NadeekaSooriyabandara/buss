@@ -4,6 +4,7 @@ import { VehicleService } from './../shared/vehicle.service';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireAction } from 'angularfire2/database';
 import { ToastrService } from 'ngx-toastr';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-vehicle-list',
@@ -20,19 +21,21 @@ export class VehicleListComponent implements OnInit {
     const x = this.vehicleService.getData();
     x.snapshotChanges().subscribe(item => {
       this.vehicleList = [];
+      console.log(item);
       item.forEach(e => {
         const y = e.payload.toJSON();
         y['$key'] = e.key;
         this.vehicleList.push(y as Vehicle);
       });
+      console.log(item.toString());
     });
   }
 
-  onDelete($key: string) {
+  /*onDelete($key: string) {
     if (confirm('Are you sure to delete this record ?') === true) {
       this.vehicleService.deleteVehicle($key);
       this.toastr.warning('Deleted Successfully', 'Vehicle Register');
     }
-  }
+  }*/
 
 }

@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: 'AIzaSyC5_3qN17U4GB0CokOHe4Lkql3GWcPK3SQ',
-    authDomain: 'vehiclerequest-de1e4.firebaseapp.com',
-    databaseURL: 'https://vehiclerequest-de1e4.firebaseio.com',
-    projectId: 'vehiclerequest-de1e4',
-    storageBucket: 'vehiclerequest-de1e4.appspot.com',
-    messagingSenderId: '52933539315'
+    apiKey: 'AIzaSyBSoyqGUtaKXE3f3C3J4RpwycxAhrU8eOE',
+    authDomain: 'survey-c6d18.firebaseapp.com',
+    databaseURL: 'https://survey-c6d18.firebaseio.com',
+    projectId: 'survey-c6d18',
+    storageBucket: 'survey-c6d18.appspot.com',
+    messagingSenderId: '605914603890'
   }
 };

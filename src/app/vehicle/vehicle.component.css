@@ -22,3 +22,8 @@
     width: auto;
     height: auto;
 }
+
+.heading {
+    display: block;
+    text-align: center;
+}
