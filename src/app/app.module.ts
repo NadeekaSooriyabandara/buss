@@ -1,3 +1,4 @@
+import { VehicleService } from './shared/vehicle.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,12 @@ import { environment } from '../environments/environment';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { AboutComponent } from './about/about.component';
+import { CompOneComponent } from './comp-one/comp-one.component';
+import { CompTwoComponent } from './comp-two/comp-two.component';
+import { ThreeCompComponent } from './three-comp/three-comp.component';
+import { FourCompComponent } from './four-comp/four-comp.component';
+import { FiveCompComponent } from './five-comp/five-comp.component';
+import { SixCompComponent } from './six-comp/six-comp.component';
 
 
 @NgModule({
@@ -21,7 +28,13 @@ import { AboutComponent } from './about/about.component';
     AppComponent,
     VehicleComponent,
     VehicleListComponent,
-    AboutComponent
+    AboutComponent,
+    CompOneComponent,
+    CompTwoComponent,
+    ThreeCompComponent,
+    FourCompComponent,
+    FiveCompComponent,
+    SixCompComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +46,7 @@ import { AboutComponent } from './about/about.component';
     FormsModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [VehicleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

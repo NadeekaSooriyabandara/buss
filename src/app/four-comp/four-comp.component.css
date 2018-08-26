@@ -1,0 +1,44 @@
+.form-group {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.png-icon {
+    margin: 50px;
+    border-color: blue;
+}
+
+.form-control {
+    width: 30%;
+}
+
+.card-content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+.container {
+    background-color: darkgray;
+    width: auto;
+    height: auto;
+}
+
+.heading {
+    display: block;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
