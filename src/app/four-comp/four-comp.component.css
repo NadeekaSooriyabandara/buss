@@ -41,4 +41,7 @@
 
 .column {
     flex: 50%;
+    vertical-align: middle;
+    text-align: center;
+    align-self: center;
 }
