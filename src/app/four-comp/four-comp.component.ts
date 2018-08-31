@@ -101,7 +101,7 @@ export class FourCompComponent implements OnInit {
     }
 
 
-    this.toastr.success('Submitted Successfully', 'Survey Application');
+    // this.toastr.success('Submitted Successfully', 'Survey Application');
   }
 
   onNext(vehicleForm4: NgForm) {
@@ -136,7 +136,7 @@ export class FourCompComponent implements OnInit {
     }
 
 
-    this.toastr.success('Filled Successfully', 'Survey Application');
+    // this.toastr.success('Filled Successfully', 'Survey Application');
 
   }
 

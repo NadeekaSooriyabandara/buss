@@ -100,7 +100,7 @@ export class ThreeCompComponent implements OnInit {
     }
 
 
-    this.toastr.success('Submitted Successfully', 'Survey Application');
+    // this.toastr.success('Submitted Successfully', 'Survey Application');
   }
 
   onNext(vehicleForm3: NgForm) {
@@ -135,7 +135,7 @@ export class ThreeCompComponent implements OnInit {
     }
 
 
-    this.toastr.success('Filled Successfully', 'Survey Application');
+    // this.toastr.success('Filled Successfully', 'Survey Application');
 
   }
 

@@ -101,7 +101,7 @@ export class SixCompComponent implements OnInit {
     }
 
 
-    this.toastr.success('Submitted Successfully', 'Survey Application');
+    // this.toastr.success('Filled Successfully', 'Survey Application');
 
   }
 

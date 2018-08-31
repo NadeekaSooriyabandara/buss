@@ -41,8 +41,9 @@ export class CompOneComponent implements OnInit {
 
   onNext(vehicleForm1: NgForm) {
 
-    this.vehicleService.setNIC(this.nic);
-    const dbref = firebase.database().ref('/Vehicles/' + this.nic);
+    // this.vehicleService.setNIC(this.nic);
+    // const dbref = firebase.database().ref('/Vehicles/' + this.nic);
+    const dbref = firebase.database().ref('/Vehicles/' + this.vehicleService.getNIC());
     dbref.child('age').set(this.age);
     dbref.child('gender').set(this.gender);
     dbref.child('occupation').set(this.occupation);
@@ -53,7 +54,7 @@ export class CompOneComponent implements OnInit {
     dbref.child('travelTime').set(this.travelTime);
     dbref.child('transportModes').set(this.transportmodes);
 
-    this.toastr.success('Filled Successfully', 'Survey Application');
+    this.toastr.success('Submitted Successfully', 'Survey Application');
 
   }
 

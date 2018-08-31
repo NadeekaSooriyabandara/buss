@@ -1,15 +1,11 @@
 <div class="container">
     <mat-card class="card-content">
         <form #vehicleForm1="ngForm">
+
             <div class="row">
                 <div class="column">
                     <div class="form-group">
                         <label class="heading">Socio-economic Information</label>
-                    </div>
-
-                    <div class="form-group">
-                        <label>NIC: </label>
-                        <input class="form-control" name="nic" [(ngModel)]="nic" placeholder="NIC" required>
                     </div>
 
                     <div class="form-group">
@@ -74,7 +70,7 @@
             </div>
 
             <div class="form-group">
-                <button mat-raised-button routerLink="/comp2" routerLinkActive="active" class="btn btn-default" type="button" (click)="onNext(vehicleForm1)" [disabled]="vehicleForm1.invalid" required>Next</button>
+                <button mat-raised-button routerLink="/comp2" routerLinkActive="active" class="btn btn-default" type="button" (click)="onNext(vehicleForm1)" [disabled]="vehicleForm1.invalid" required>Submit</button>
             </div>
 
 

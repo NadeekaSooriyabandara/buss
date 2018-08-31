@@ -13,7 +13,7 @@ import { FourCompComponent } from './four-comp/four-comp.component';
 const routes: Routes = [
   {
       path: '',
-      component: CompOneComponent
+      component: CompTwoComponent
   },
   {
     path: 'vehicles',

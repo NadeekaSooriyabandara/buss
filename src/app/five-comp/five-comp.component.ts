@@ -100,7 +100,7 @@ export class FiveCompComponent implements OnInit {
       dbref.child('set4option2').set('Low Floor A/C Bus');
     }
 
-    this.toastr.success('Submitted Successfully', 'Survey Application');
+    // this.toastr.success('Submitted Successfully', 'Survey Application');
   }
 
   onNext(vehicleForm5: NgForm) {
@@ -134,7 +134,7 @@ export class FiveCompComponent implements OnInit {
       dbref.child('set4option2').set('Low Floor A/C Bus');
     }
 
-    this.toastr.success('Filled Successfully', 'Survey Application');
+    // this.toastr.success('Filled Successfully', 'Survey Application');
 
   }
 
