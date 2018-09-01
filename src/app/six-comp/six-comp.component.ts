@@ -69,6 +69,16 @@ export class SixCompComponent implements OnInit {
     this.fascilityC5 = this.wifiACarray[Math.floor(Math.random() * 2)].toString();
   }
 
+  isImageNull() {
+    if (this.set5option1 === '' || this.set5option2 === '' || this.set5option3 === '' ||
+    this.set5option1 === this.set5option2 || this.set5option1 === this.set5option3 ||
+  this.set5option2 === this.set5option3 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   onSubmit(vehicleForm6: NgForm) {
     const dbref = firebase.database().ref('/Vehicles/' + this.vehicleService.getNIC());
     dbref.child('costA5').set(this.costA5);

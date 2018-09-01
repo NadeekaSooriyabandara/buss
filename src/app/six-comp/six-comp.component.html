@@ -141,7 +141,7 @@
                 </div>-->
 
             <div class="form-group">
-                <button mat-raised-button routerLink="/comp1" routerLinkActive="active" class="btn btn-default" type="button" (click)="onSubmit(vehicleForm6)" [disabled]="vehicleForm6.invalid" required>Next</button>
+                <button mat-raised-button routerLink="/comp1" routerLinkActive="active" class="btn btn-default" type="button" (click)="onSubmit(vehicleForm6)" [disabled]="vehicleForm6.invalid || isImageNull()" required>Next</button>
             </div>
 
         </form>

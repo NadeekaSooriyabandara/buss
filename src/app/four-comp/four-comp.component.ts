@@ -140,4 +140,14 @@ export class FourCompComponent implements OnInit {
 
   }
 
+  isImageNull() {
+    if (this.set3option1 === '' || this.set3option2 === '' || this.set3option3 === '' ||
+    this.set3option1 === this.set3option2 || this.set3option1 === this.set3option3 ||
+  this.set3option2 === this.set3option3 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }

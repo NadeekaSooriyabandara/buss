@@ -103,6 +103,16 @@ export class FiveCompComponent implements OnInit {
     // this.toastr.success('Submitted Successfully', 'Survey Application');
   }
 
+  isImageNull() {
+    if (this.set4option1 === '' || this.set4option2 === '' || this.set4option3 === '' ||
+    this.set4option1 === this.set4option2 || this.set4option1 === this.set4option3 ||
+  this.set4option2 === this.set4option3 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   onNext(vehicleForm5: NgForm) {
     const dbref = firebase.database().ref('/Vehicles/' + this.vehicleService.getNIC());
     dbref.child('costA4').set(this.costA4);

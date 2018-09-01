@@ -135,8 +135,8 @@
                 </div>-->
 
             <div class="form-group">
-                <button mat-raised-button routerLink="/comp4" routerLinkActive="active" class="btn btn-default" type="button" (click)="onNext(vehicleForm3)" [disabled]="vehicleForm3.invalid" required>Next</button>
-                <button mat-raised-button routerLink="/comp1" routerLinkActive="active" class="btn btn-default" type="button" (click)="onSkip(vehicleForm3)" [disabled]="vehicleForm3.invalid" required>Skip</button>
+                <button mat-raised-button routerLink="/comp4" routerLinkActive="active" class="btn btn-default" type="button" (click)="onNext(vehicleForm3)" [disabled]="vehicleForm3.invalid || isImageNull()" required>Next</button>
+                <button mat-raised-button routerLink="/comp1" routerLinkActive="active" class="btn btn-default" type="button" (click)="onSkip(vehicleForm3)" [disabled]="vehicleForm3.invalid || isImageNull()" required>Skip</button>
             </div>
 
         </form>

@@ -103,6 +103,16 @@ export class ThreeCompComponent implements OnInit {
     // this.toastr.success('Submitted Successfully', 'Survey Application');
   }
 
+  isImageNull() {
+    if (this.set2option1 === '' || this.set2option2 === '' || this.set2option3 === '' ||
+    this.set2option1 === this.set2option2 || this.set2option1 === this.set2option3 ||
+  this.set2option2 === this.set2option3 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   onNext(vehicleForm3: NgForm) {
     const dbref = firebase.database().ref('/Vehicles/' + this.vehicleService.getNIC());
     dbref.child('costA2').set(this.costA2);

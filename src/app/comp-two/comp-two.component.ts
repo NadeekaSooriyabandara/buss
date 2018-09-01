@@ -57,8 +57,15 @@ export class CompTwoComponent implements OnInit {
     private db: AngularFireDatabase) { }
 
   ngOnInit() {
-    const d = new Date();
-    this.nic = d.getMilliseconds().toString();
+    const d = new Date(),
+     dformat = [d.getMonth() + 1,
+               d.getDate(),
+               d.getFullYear()].join() +
+              [d.getHours(),
+               d.getMinutes(),
+               d.getSeconds()].join();
+
+    this.nic = d.toString();
     this.distanceA1 = this.distanceAarray[Math.floor(Math.random() * 3)].toString();
     this.distanceB1 = this.distanceBarray[Math.floor(Math.random() * 3)].toString();
     this.distanceC1 = this.distanceCarray[Math.floor(Math.random() * 3)].toString();
@@ -71,43 +78,18 @@ export class CompTwoComponent implements OnInit {
     this.fascilityA1 = this.wifiACarray[Math.floor(Math.random() * 2)].toString();
     this.fascilityB1 = this.wifiACarray[Math.floor(Math.random() * 2)].toString();
     this.fascilityC1 = this.wifiACarray[Math.floor(Math.random() * 2)].toString();
-    // this.toastr.success(this.message, 'Survey Application');
+
   }
 
-  // onSkip(vehicleForm2: NgForm) {
-  //   const dbref = firebase.database().ref('/Vehicles/' + this.nic);
-  //   dbref.child('costA1').set(this.costA1);
-  //   dbref.child('distanceA1').set(this.distanceA1);
-  //   dbref.child('travelTimeA1').set(this.travelTimeA1);
-  //   dbref.child('fascilityA1').set(this.fascilityA1);
-  //   dbref.child('costB1').set(this.costB1);
-  //   dbref.child('distanceB1').set(this.distanceB1);
-  //   dbref.child('travelTimeB1').set(this.travelTimeB1);
-  //   dbref.child('fascilityB1').set(this.fascilityB1);
-  //   dbref.child('costC1').set(this.costC1);
-  //   dbref.child('distanceC1').set(this.distanceC1);
-  //   dbref.child('travelTimeC1').set(this.travelTimeC1);
-  //   dbref.child('fascilityC1').set(this.fascilityC1);
-
-
-  //   if (this.set1option1 === '1') {
-  //     dbref.child('set1option1').set('Normal Bus');
-  //   } else if (this.set1option1 === '2') {
-  //     dbref.child('set1option2').set('Normal Bus');
-  //   }
-  //   if (this.set1option2 === '1') {
-  //     dbref.child('set1option1').set('Normal Bus + Train');
-  //   } else if (this.set1option2 === '2') {
-  //     dbref.child('set1option2').set('Normal Bus + Train');
-  //   }
-  //   if (this.set1option3 === '1') {
-  //     dbref.child('set1option1').set('Low Floor A/C Bus');
-  //   } else if (this.set1option3 === '2') {
-  //     dbref.child('set1option2').set('Low Floor A/C Bus');
-  //   }
-
-  //   this.toastr.success('Submitted Successfully', 'Survey Application');
-  // }
+  isImageNull() {
+    if (this.set1option1 === '' || this.set1option2 === '' || this.set1option3 === '' ||
+    this.set1option1 === this.set1option2 || this.set1option1 === this.set1option3 ||
+  this.set1option2 === this.set1option3 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   onNext(vehicleForm2: NgForm) {
     this.vehicleService.setNIC(this.nic);
@@ -141,8 +123,6 @@ export class CompTwoComponent implements OnInit {
     } else if (this.set1option3 === '2') {
       dbref.child('set1option2').set('Low Floor A/C Bus');
     }
-
-    // this.toastr.success('Filled Successfully', 'Survey Application');
 
   }
 
