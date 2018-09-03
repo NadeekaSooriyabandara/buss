@@ -31,9 +31,9 @@ export class SixCompComponent implements OnInit {
   distanceAarray = [5, 10, 20];
   distanceBarray = [5, 10, 20];
   distanceCarray = [5, 10, 20];
-  costAarray = [18, 25, 40];
-  costBarray = [25, 30, 35];
-  costCarray = [35, 50, 80];
+  costAarray = [15, 25, 40];
+  costBarray = [20, 25, 30];
+  costCarray = [40, 60, 100];
   travelTimeAarray = [30, 45, 90];
   travelTimeBarray = [30, 45, 60];
   travelTimeCarray = [20, 30, 60];
