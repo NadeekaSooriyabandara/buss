@@ -58,14 +58,14 @@ export class CompTwoComponent implements OnInit {
 
   ngOnInit() {
     const d = new Date(),
-     dformat = [d.getMonth() + 1,
-               d.getDate(),
+     dformat = [d.getMonth(),
+               d.getDay(),
                d.getFullYear()].join() +
               [d.getHours(),
                d.getMinutes(),
                d.getSeconds()].join();
 
-    this.nic = d.toString();
+    this.nic = new Date().toISOString().substr(0, 19);
     this.distanceA1 = this.distanceAarray[Math.floor(Math.random() * 3)].toString();
     this.distanceB1 = this.distanceBarray[Math.floor(Math.random() * 3)].toString();
     this.distanceC1 = this.distanceCarray[Math.floor(Math.random() * 3)].toString();
