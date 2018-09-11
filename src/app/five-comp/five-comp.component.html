@@ -5,6 +5,9 @@
 
             <div class="row">
                 <div class="column">
+                    <div><label></label></div>
+                </div>
+                <div class="column">
                     <div><label>Normal Bus</label></div>
                 </div>
 
@@ -17,6 +20,9 @@
             </div>
 
             <div class="row">
+                <div class="column">
+                    <div><label></label></div>
+                </div>
                 <div class="column"><img class="png-icon" src="../../../assets/bus.jpg" style="max-width: 200px; min-width: 200px;"></div>
                 <div class="column"><img class="png-icon" src="../../../assets/train.jpg" style="max-width: 200px; min-width: 200px;"></div>
                 <div class="column"><img class="png-icon" src="../../../assets/lowfloor.jpg" style="max-width: 200px; min-width: 200px;"></div>
@@ -25,11 +31,20 @@
             <div class="row">
                 <div class="column">
                     <div>
-                        <label>Distance(km): {{distanceA4}}</label><br>
-                        <label>Cost(Rs): {{costA4}}</label><br>
-                        <label>Travel Time(min): {{travelTimeA4}}</label><br>
-                        <label>Facilities(AC): {{fascilityA4}}</label><br>
+                        <label>Distance(km): </label><br>
+                        <label>Cost(Rs): </label><br>
+                        <label>Travel Time(min): </label><br>
+                        <label>Facilities(AC): </label><br>
                         <label>Choice:</label>
+                    </div>
+                </div>
+                <div class="column">
+                    <div>
+                        <label>{{distanceA4}}</label><br>
+                        <label>{{costA4}}</label><br>
+                        <label>{{travelTimeA4}}</label><br>
+                        <label>{{fascilityA4}}</label><br>
+
                         <mat-form-field>
                             <mat-select [(value)]="set4option1">
                                 <mat-option value="1">1</mat-option>
@@ -41,11 +56,11 @@
                 </div>
                 <div class="column">
                     <div>
-                        <label>Distance(km): {{distanceB4}}</label><br>
-                        <label>Cost(Rs): {{costB4}}</label><br>
-                        <label>Travel Time(min): {{travelTimeB4}}</label><br>
-                        <label>Facilities(AC): {{fascilityB4}}</label><br>
-                        <label>Choice:</label>
+                        <label>{{distanceB4}}</label><br>
+                        <label>{{costB4}}</label><br>
+                        <label>{{travelTimeB4}}</label><br>
+                        <label>{{fascilityB4}}</label><br>
+
                         <mat-form-field>
                             <mat-select [(value)]="set4option2">
                                 <mat-option value="1">1</mat-option>
@@ -57,11 +72,11 @@
                 </div>
                 <div class="column">
                     <div>
-                        <label>Distance(km): {{distanceC4}}</label><br>
-                        <label>Cost(Rs): {{costC4}}</label><br>
-                        <label>Travel Time(min): {{travelTimeC4}}</label><br>
-                        <label>Facilities(AC): {{fascilityC4}}</label><br>
-                        <label>Choice:</label>
+                        <label>{{distanceC4}}</label><br>
+                        <label>{{costC4}}</label><br>
+                        <label>{{travelTimeC4}}</label><br>
+                        <label>{{fascilityC4}}</label><br>
+
                         <mat-form-field>
                             <mat-select [(value)]="set4option3">
                                 <mat-option value="1">1</mat-option>

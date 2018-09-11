@@ -42,3 +42,10 @@
 .column {
     flex: 50%;
 }
+
+.det {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
