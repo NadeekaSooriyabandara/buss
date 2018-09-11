@@ -1,7 +1,7 @@
 <table mat-table class="table table-sm table-hover">
     <thead>
         <tr>
-            <th style="text-align:center">Respondent</th>
+            <th style="text-align:center">No.</th>
             <th style="text-align:center">Data Set No.</th>
             <th style="text-align:center" colspan="4">Normal Bus</th>
             <th style="text-align:center" colspan="4">Normal Bus + Train</th>
@@ -135,8 +135,8 @@
 
 <table mat-table class="table table-sm table-hover">
     <thead>
-        <th style="text-align:center">Respondent</th>
-        <th style="text-align:center">Age</th>
+        <th style="text-align:center">No.</th>
+        <th style="text-align:center">Birth year</th>
         <th style="text-align:center">Gender</th>
         <th style="text-align:center">Occupation</th>
         <th style="text-align:center">Income Level</th>
@@ -144,6 +144,8 @@
         <th style="text-align:center">Destination</th>
         <th style="text-align:center">Travel Time</th>
         <th style="text-align:center">Transport Modes</th>
+        <th style="text-align:center">Purpose</th>
+        <th style="text-align:center">Cost</th>
     </thead>
     <tbody>
         <tr *ngFor="let vehicle of vehicleList">
@@ -156,6 +158,8 @@
             <td style="text-align:center">{{vehicle.destination}}</td>
             <td style="text-align:center">{{vehicle.travelTime}}</td>
             <td style="text-align:center">{{vehicle.transportModes}}</td>
+            <td style="text-align:center">{{vehicle.purpose}}</td>
+            <td style="text-align:center">{{vehicle.cost}}</td>
         </tr>
     </tbody>
 </table>

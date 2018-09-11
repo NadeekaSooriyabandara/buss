@@ -9,11 +9,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Age: </label>
-                        <!--<input type="number" class="form-control" name="age" [(ngModel)]="age" placeholder="Age" required>-->
+                        <label>Year of birth: </label>
+                        <input type="number" class="form-control" name="age" [(ngModel)]="age" placeholder="Year of birth" required>
 
 
-                        <mat-form-field>
+                        <!--<mat-form-field>
                             <mat-select [(value)]="age">
                                 <mat-option value="below 20">below 20</mat-option>
                                 <mat-option value="20-30">20-30</mat-option>
@@ -22,7 +22,7 @@
                                 <mat-option value="50-60">50-60</mat-option>
                                 <mat-option value="above 60">above 60</mat-option>
                             </mat-select>
-                        </mat-form-field>
+                        </mat-form-field>-->
 
                     </div>
 
@@ -71,7 +71,8 @@
 
                     <div class="form-group">
                         <label>Origin:</label>
-                        <mat-form-field>
+                        <input type="text" class="form-control" name="origin" [(ngModel)]="origin" placeholder="Origin" required>
+                        <!--<mat-form-field>
                             <mat-select [(value)]="origin">
                                 <mat-option value="Moratuwa">Moratuwa</mat-option>
                                 <mat-option value="Katubedda">Katubedda</mat-option>
@@ -84,12 +85,14 @@
                                 <mat-option value="Galle Face">Galle Face</mat-option>
                                 <mat-option value="Pettah">Pettah</mat-option>
                             </mat-select>
-                        </mat-form-field>
+                        </mat-form-field>-->
                     </div>
 
                     <div class="form-group">
                         <label>Destination:</label>
-                        <mat-form-field>
+                        <input type="text" class="form-control" name="destination" [(ngModel)]="destination" placeholder="Destination" required>
+
+                        <!--<mat-form-field>
                             <mat-select [(value)]="destination">
                                 <mat-option value="Moratuwa">Moratuwa</mat-option>
                                 <mat-option value="Katubedda">Katubedda</mat-option>
@@ -102,12 +105,13 @@
                                 <mat-option value="Galle Face">Galle Face</mat-option>
                                 <mat-option value="Pettah">Pettah</mat-option>
                             </mat-select>
-                        </mat-form-field>
+                        </mat-form-field>-->
                     </div>
 
                     <div class="form-group">
                         <label>Travel time (min):</label>
-                        <mat-form-field>
+                        <input type="number" class="form-control" name="travelTime" [(ngModel)]="travelTime" placeholder="Travel time" required>
+                        <!--<mat-form-field>
                             <mat-select [(value)]="travelTime">
                                 <mat-option value="below 15">below 15</mat-option>
                                 <mat-option value="15-30">15-30</mat-option>
@@ -116,7 +120,7 @@
                                 <mat-option value="60-90">60-90</mat-option>
                                 <mat-option value="above 90">above 90</mat-option>
                             </mat-select>
-                        </mat-form-field>
+                        </mat-form-field>-->
                     </div>
 
                     <div class="form-group">
@@ -126,9 +130,30 @@
                             <mat-select [(value)]="transportmodes">
                                 <mat-option value="Bus">Bus</mat-option>
                                 <mat-option value="Train">Train</mat-option>
+                                <mat-option value="Bus + Train">Bus + Train</mat-option>
                                 <mat-option value="Private Vehicle">Private Vehicle</mat-option>
                             </mat-select>
                         </mat-form-field>
+                    </div>
+                    <div class="form-group">
+                        <label>Purpose of the trip:</label>
+
+                        <mat-form-field>
+                            <mat-select [(value)]="purpose">
+                                <mat-option value="Work">Work</mat-option>
+                                <mat-option value="Home">Home</mat-option>
+                                <mat-option value="Education">Education</mat-option>
+                                <mat-option value="Shopping">Shopping</mat-option>
+                                <mat-option value="Leisure">Leisure</mat-option>
+                                <mat-option value="Business">Business</mat-option>
+                                <mat-option value="Other">Other</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cost (Rs):</label>
+                        <input type="number" class="form-control" name="cost" [(ngModel)]="cost" placeholder="Cost" required>
                     </div>
                 </div>
 

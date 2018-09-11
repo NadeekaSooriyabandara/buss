@@ -24,6 +24,8 @@ export class CompOneComponent implements OnInit {
   destination = '';
   travelTime = '';
   transportmodes = '';
+  cost = '';
+  purpose = '';
 
   vehicletype = 'bus';
   ac = 'AC';
@@ -53,6 +55,8 @@ export class CompOneComponent implements OnInit {
     dbref.child('destination').set(this.destination);
     dbref.child('travelTime').set(this.travelTime);
     dbref.child('transportModes').set(this.transportmodes);
+    dbref.child('purpose').set(this.purpose);
+    dbref.child('cost').set(this.cost);
 
     this.toastr.success('Submitted Successfully', 'Survey Application');
 
